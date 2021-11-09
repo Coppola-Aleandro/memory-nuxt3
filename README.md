@@ -27,3 +27,7 @@ yarn build
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
+
+
+💿  Install dependencies with `npm install` or `yarn install`
+🚀  Start development server with `npm run dev` or `yarn dev`
