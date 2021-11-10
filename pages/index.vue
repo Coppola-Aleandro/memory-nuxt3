@@ -8,7 +8,7 @@
       <div class="text-black p-2 bg-gray-300 rounded-sm" v-if="accountAddress">Account: {{ accountAddress }}</div>
     </div>
     <div class="text-green-300 font-bold font-Mohave text-5xl">
-      {{ $t('welcome') }} on New Verse
+      Welcomo on New Verse
       <div class="text-center text-2xl mt-10 text-green-200">Coming soon...</div>
     </div>     
 
