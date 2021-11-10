@@ -4,8 +4,8 @@
 <template>
   <div class="flex flex-col justify-center items-center min-h-screen bg-black text-green-300">
     <div class="absolute top-16 right-16">
-      <button v-on:click="onConnectWallet()" v-if="!accountAddress">Connetti Wallet</button>
-      <div class="text-white" v-if="accountAddress">Account: {{ accountAddress }}</div>
+      <button v-on:click="onConnectWallet()" v-if="!accountAddress" class="p-2 shadow-sm bg-green-300 text-black rounded-sm">Connetti Wallet</button>
+      <div class="text-black p-2 bg-gray-300 rounded-sm" v-if="accountAddress">Account: {{ accountAddress }}</div>
     </div>
     <div class="text-green-300 font-bold font-Mohave text-5xl">
       {{ $t('welcome') }} on New Verse
