@@ -13,7 +13,7 @@
     </div>     
 
     <div class="mt-20 text-green-200">
-      <NuxtLink to="/about">Chi siamo</NuxtLink>
+      <NuxtLink to="/about">About</NuxtLink>
     </div>
   </div>
 </template>
