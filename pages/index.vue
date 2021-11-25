@@ -2,26 +2,37 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;700&display=swap" rel="stylesheet">
 <template>
-  <div class="flex flex-col justify-center items-center min-h-screen bg-black text-green-300">
-    <div class="absolute top-16 right-16">
-      <button v-on:click="onConnectWallet()" v-if="!accountAddress" class="p-2 shadow-sm bg-green-300 text-black rounded-sm">Connetti Wallet</button>
-      <div class="text-black p-2 bg-gray-300 rounded-sm" v-if="accountAddress">Account: {{ accountAddress }}</div>
-    </div>
+  <div class="flex flex-col justify-center items-center text-green-300 welcome-section">    
+    
     <div class="text-green-300 font-bold font-Mohave text-5xl">
       Welcome on New Verse
       <div class="text-center text-2xl mt-10 text-green-200">Coming soon...</div>
     </div>     
-
-    <div class="mt-20 text-green-200">
+    
+    <div class="mt-20 text-green-200 btn-indigo">
       <NuxtLink to="/about">About</NuxtLink>
     </div>
   </div>
 </template>
 
+
+<style>
+  
+</style>
+
 <script>
+import "~/assets/css/home.css";
 import { useState, useNuxtApp } from '#app';
 
-export default {  
+export default { 
+  setup () {
+    useMeta({
+      title: "Home",
+      link: [{
+        rel: 'icon', type: 'image/x-icon', href: '/assets/images/new-verse-icon.png'
+      }]
+    })
+  }, 
   data() {
     return {
       nuxtApp: null,
