@@ -8,3 +8,14 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  setup() {
+    useMeta({
+      title: 'Chi siamo',      
+    });
+  },
+}
+</script>
+
