@@ -8,7 +8,11 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        120: '120px',
+      },
+    },
     fontFamily: {
       display: ['Mohave'],
       body: ['Mohave'],

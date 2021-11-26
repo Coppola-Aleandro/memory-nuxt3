@@ -8,6 +8,6 @@
 @tailwind components;
 @tailwind utilities;
 
-main {
+main {  
   /* height:calc((var(--vh, 1vh) * 100) - theme('spacing.24')); */
 }

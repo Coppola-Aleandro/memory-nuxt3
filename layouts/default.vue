@@ -1,8 +1,11 @@
 <template>
   <div>
-    <nav class="flex items-center p-4 fixed w-full top-0 bg-white">
+    <nav
+      class="flex items-center p-4 fixed w-full top-0 bg-white z-50 shadow-md"
+    >
       <img src="/assets/images/new-verse-icon.png" alt="New Verse" width="60" />
-      <NuxtLink to="/" class="ml-16">Home</NuxtLink>
+      <NuxtLink to="/" class="ml-4">Home</NuxtLink>
+      <NuxtLink to="/about" class="ml-4">Chi siamo</NuxtLink>
       <span class="flex-grow"></span>
       <div>
         <button
