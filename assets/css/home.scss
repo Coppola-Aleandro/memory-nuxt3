@@ -1,55 +1,30 @@
-/* .diagonal-box {
-	background-image: linear-gradient(45deg, #654ea3, #eaafc8);
-	transform: skewY(-11deg);
-}
-
-.content {
-	max-width: 50em;
-	margin: 0 auto;
-	transform: skewY(11deg);
-} */
-
 :root {
-  --width: 100vw;
-  --full-width: 100vw;
-
-  @media (min-width: 42em) {
-    --width: 42rem;
-  }
-
-  --angle: -11deg;
-  /*-----------------
-    Magic Number Alert:
-    
-    the 0.09719 is calculated by this formula:
-    tan(11°) / 2
-    11° is the current skewY value.
-    ------------------*/
-  --magic-number: 0.09719;
-  --skew-padding: calc(var(--width) * var(--magic-number));
-  --skew-padding-top: calc(var(--width) * var(--magic-number) - 700px);
-  --clip-padding: calc(var(--full-width) * var(--magic-number));
+  --diagonal-section-offset: 50px;
 }
 
-.diagonal-box {
+.diagonal-section,
+.diagonal-section-top,
+.diagonal-section-bottom {
   position: relative;
-  padding: var(--skew-padding) 0;
-  margin-top: -1px;
-  margin-bottom: 120px;
-  @apply mb-14 md:mb-28;
+  z-index: 1;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
-  &:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    transform: skewy(var(--angle));
-    transform-origin: 50% 0;
-    outline: 1px solid transparent;
-    backface-visibility: hidden;
-    margin-top: calc(-0px - theme('spacing.120'));
-    @apply bg-green-400;
+.diagonal-section {
+  margin-top: calc(0px - var(--diagonal-section-offset));
+}
+
+@supports (clip-path: inset(50%)) {
+  .diagonal-section {
+    padding-top: calc(var(--diagonal-section-offset) / 2);
+    padding-bottom: calc(var(--diagonal-section-offset) / 2);
+    clip-path: polygon(
+      0% 0%,
+      100% var(--diagonal-section-offset),
+      100% 100%,
+      0% calc(100% - var(--diagonal-section-offset))
+    );
   }
 }

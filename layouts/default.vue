@@ -1,9 +1,20 @@
 <template>
   <div>
     <nav
-      class="flex items-center p-4 fixed w-full top-0 bg-white z-50 shadow-md"
+      class="
+        flex
+        items-center
+        p-4
+        fixed
+        w-full
+        top-0
+        bg-white
+        z-50
+        shadow-md
+        h-24
+      "
     >
-      <img src="/assets/images/new-verse-icon.png" alt="New Verse" width="60" />
+      <img src="images/new-verse-icon.png" alt="New Verse" width="60" />
       <NuxtLink to="/" class="ml-4">Home</NuxtLink>
       <NuxtLink to="/about" class="ml-4">Chi siamo</NuxtLink>
       <span class="flex-grow"></span>
@@ -40,7 +51,7 @@ export default {
         {
           rel: 'icon',
           type: 'image/x-icon',
-          href: '/assets/images/new-verse-icon.png',
+          href: 'images/new-verse-icon.png',
         },
       ],
     });

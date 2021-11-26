@@ -2,21 +2,21 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;700&display=swap" rel="stylesheet">
 <template>
-  <div>
-    <section class="z-10">
-      <div class="diagonal-box">
-          <div class="flex flex-col justify-center items-center text-black welcome-section relative p-8 md:p-12">        
-            <span class="font-bold font-Mohave text-2xl text-center">Welcome on</span>
-            <br> 
-            <div class="font-bold font-Mohave text-5xl text-center">
-              New Verse
-              <div class="text-center text-2xl mt-24 text-white">Coming soon...</div>
-            </div>             
-          </div>
+  <div>    
+    <section class="diagonal-section bg-green-400">
+      <div class="py-24 mt-12">
+        <div class="font-thin font-Mohave text-2xl text-center">Welcome on</div>
+
+        <div class="font-bold font-Mohave text-5xl text-center mt-2">
+            <h1>New Verse</h1>
+        </div>  
+        <div class="text-center text-2xl mt-12 text-white">Coming soon</div>
       </div>
     </section>
-    <section  >
-      Welc asjhdba,jhsdba,sjd ba,sdba,sjbd,
+    <section class="mt-12">
+      <div class="text-center">
+        <h2 class="font-bold text-2xl">I nostri servizi</h2>
+      </div>
     </section>
   </div>
 </template>
@@ -35,7 +35,7 @@ export default {
     useMeta({
       title: "Home",
       link: [{
-        rel: 'icon', type: 'image/x-icon', href: '/assets/images/new-verse-icon.png'
+        rel: 'icon', type: 'image/x-icon', href: 'images/new-verse-icon.png'
       }]
     })
   }, 
