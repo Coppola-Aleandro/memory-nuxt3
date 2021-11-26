@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Sidebar />
     <nav
       class="
         flex
@@ -9,14 +10,22 @@
         w-full
         top-0
         bg-white
-        z-50
+        z-40
         shadow-md
         h-24
       "
     >
-      <img src="/images/new-verse-icon.png" alt="New Verse" width="60" />
-      <NuxtLink to="/" class="ml-4">Home</NuxtLink>
-      <NuxtLink to="/about" class="ml-4">Chi siamo</NuxtLink>
+      <NuxtLink to="/">
+        <img src="/images/new-verse-icon.png" alt="New Verse" width="60" />
+      </NuxtLink>
+      <button
+        type="button"
+        class="px-4 focus:outline-non"
+        @click="sidebarIsOpen = true"
+      >
+        <span class="sr-only">Open sidebar {{ sidebarIsOpen }}</span>
+        <MenuAlt2Icon class="h-6 w-6" aria-hidden="true" />
+      </button>
       <span class="flex-grow"></span>
       <div>
         <button
@@ -40,10 +49,55 @@
   </div>
 </template>
 
+<script setup>
+const sidebarIsOpen = useState('sidebarIsOpen', () => false);
+</script>
 <script>
 import { useState, useNuxtApp } from '#app';
+import {
+  Dialog,
+  DialogOverlay,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+  TransitionChild,
+  TransitionRoot,
+} from '@headlessui/vue';
+import {
+  BellIcon,
+  CalendarIcon,
+  ChartBarIcon,
+  FolderIcon,
+  HomeIcon,
+  InboxIcon,
+  MenuAlt2Icon,
+  UsersIcon,
+  XIcon,
+} from '@heroicons/vue/outline';
 
+import Sidebar from '~~/components/Sidebar.vue';
 export default {
+  components: {
+    BellIcon,
+    CalendarIcon,
+    ChartBarIcon,
+    FolderIcon,
+    HomeIcon,
+    InboxIcon,
+    MenuAlt2Icon,
+    UsersIcon,
+    XIcon,
+    Dialog,
+    DialogOverlay,
+    Menu,
+    MenuButton,
+    MenuItem,
+    MenuItems,
+    TransitionChild,
+    TransitionRoot,
+    Sidebar,
+  },
   setup() {
     useMeta({
       title: 'Home',
