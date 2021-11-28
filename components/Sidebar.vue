@@ -77,14 +77,12 @@
           </div>
           <div class="mt-5 flex-1 h-0 overflow-y-auto">
             <nav class="px-2 space-y-1">
-              <a
-                v-for="item in navigation"
-                :key="item.name"
-                :href="item.href"
+              <NuxtLink
+                v-for="item in useNavigationMenu"
+                :key="item.href"
+                :to="item.href"
                 :class="[
-                  item.current
-                    ? 'bg-primary-600 text-white'
-                    : 'text-black hover:bg-primary-600 hover:text-white',
+                  'text-black hover:bg-primary-600 hover:text-white',
                   'group flex items-center px-2 py-2 text-base font-medium rounded-md',
                 ]"
               >
@@ -93,8 +91,8 @@
                   class="mr-4 flex-shrink-0 h-6 w-6"
                   aria-hidden="true"
                 />
-                {{ item.name }}
-              </a>
+                <span>{{ item.title }}</span>
+              </NuxtLink>
             </nav>
           </div>
         </div>
@@ -130,6 +128,7 @@ import {
   XIcon,
 } from '@heroicons/vue/outline';
 import { SearchIcon } from '@heroicons/vue/solid';
+import { useNavigationMenu } from '~~/composables/useNavigationMenu';
 
 const navigation = [
   { name: 'Home', href: '#', icon: HomeIcon, current: true },
