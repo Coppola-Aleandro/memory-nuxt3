@@ -83,14 +83,14 @@
                 :href="item.href"
                 :class="[
                   item.current
-                    ? 'bg-green-400 text-black'
-                    : 'text-black hover:bg-green-400',
+                    ? 'bg-primary-600 text-white'
+                    : 'text-black hover:bg-primary-600 hover:text-white',
                   'group flex items-center px-2 py-2 text-base font-medium rounded-md',
                 ]"
               >
                 <component
                   :is="item.icon"
-                  class="mr-4 flex-shrink-0 h-6 w-6 text-black"
+                  class="mr-4 flex-shrink-0 h-6 w-6"
                   aria-hidden="true"
                 />
                 {{ item.name }}
@@ -123,11 +123,8 @@ import {
 } from '@headlessui/vue';
 import {
   BellIcon,
-  CalendarIcon,
-  ChartBarIcon,
   FolderIcon,
   HomeIcon,
-  InboxIcon,
   MenuAlt2Icon,
   UsersIcon,
   XIcon,

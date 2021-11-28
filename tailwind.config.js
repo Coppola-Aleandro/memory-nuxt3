@@ -1,3 +1,5 @@
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   purge: [
     './components/**/*.{vue,js}',
@@ -11,6 +13,11 @@ module.exports = {
     extend: {
       spacing: {
         120: '120px',
+      },
+      colors: {
+        primary: colors.blue,
+        secondary: colors.black,
+        warning: colors.red,
       },
     },
     fontFamily: {

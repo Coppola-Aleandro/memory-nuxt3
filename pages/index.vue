@@ -3,8 +3,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Mohave:wght@300;700&display=swap" rel="stylesheet">
 <template>
   <div>    
-    <section class="diagonal-section bg-green-400">
-      <div class="py-24 mt-12">
+    <section class="diagonal-section bg-primary-600">
+      <div class="py-24 mt-12 text-white">
         <div class="font-thin font-Mohave text-2xl text-center">Welcome on</div>
 
         <div class="font-bold font-Mohave text-5xl text-center mt-2">

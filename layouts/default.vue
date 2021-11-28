@@ -31,7 +31,7 @@
         <button
           v-on:click="onConnectWallet()"
           v-if="!accountAddress"
-          class="p-2 shadow-sm bg-green-300 text-black rounded-sm"
+          class="p-2 shadow-sm bg-primary-600 text-white rounded-sm"
         >
           Connetti Wallet
         </button>
