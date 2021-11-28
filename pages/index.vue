@@ -37,7 +37,7 @@ export default {
       link: [{
         rel: 'icon', type: 'image/x-icon', href: 'images/new-verse-icon.png'
       }]
-    })
+    });
   }, 
   data() {
     return {
@@ -45,7 +45,7 @@ export default {
       accountAddress: useState('accountAddress'),
       async onConnectWallet() {
         this.nuxtApp.payload.state.accountAddress = await connectWallet();        
-      },
+      }      
     }
   },
   mounted() {

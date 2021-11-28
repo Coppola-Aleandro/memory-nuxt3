@@ -18,15 +18,18 @@
       <NuxtLink to="/">
         <img src="/images/new-verse-icon.png" alt="New Verse" width="60" />
       </NuxtLink>
+
       <button
         type="button"
-        class="px-4 focus:outline-non"
+        class="px-4 focus:outline-non block"
         @click="sidebarIsOpen = true"
       >
         <span class="sr-only">Open sidebar {{ sidebarIsOpen }}</span>
         <MenuAlt2Icon class="h-6 w-6" aria-hidden="true" />
       </button>
+
       <span class="flex-grow"></span>
+
       <div>
         <button
           v-on:click="onConnectWallet()"
