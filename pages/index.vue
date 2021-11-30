@@ -1,7 +1,7 @@
 <template>
   <div class="container m-auto">
     <div class="w-full flex justify-between items-center border-b-2 pb-4">
-      <span>Mosse: {{ totalClicks }}</span>
+      <span class="text-blue-700">Mosse: {{ totalClicks }}</span>
 
       <div class="flex items-center">
         Record: {{ record }} Mosse
