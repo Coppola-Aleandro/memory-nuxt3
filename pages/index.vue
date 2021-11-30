@@ -76,6 +76,11 @@ export default {
       this.grid = grid.sort((a, b) => 0.5 - Math.random());
     },
     selectCard(index) {
+      this.preventClick(index);
+      this.turnCard(index);
+      this.checkStatusGame();
+    },
+    preventClick(index) {
       if (
         this.cardsFounds.includes(index) ||
         this.faceUpCards.includes(index)
@@ -89,10 +94,10 @@ export default {
         this.faceUpCards = [];
         return;
       }
-
+    },
+    turnCard(index) {
       this.faceUpCards.push(index);
       this.totalClicks++;
-
       if (this.faceUpCards.length === 2) {
         if (this.grid[this.faceUpCards[0]] === this.grid[this.faceUpCards[1]]) {
           this.cardsFounds.push(...this.faceUpCards);
@@ -103,10 +108,8 @@ export default {
           }, 2000);
         }
       }
-
-      this.checkGrid();
     },
-    checkGrid() {
+    checkStatusGame() {
       if (this.cardsFounds.length === this.grid.length) {
         if (this.totalClicks < this.record || this.record === 0) {
           this.record = this.totalClicks;
