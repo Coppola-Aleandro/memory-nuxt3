@@ -29,7 +29,7 @@
 
 <script>
 import '~/assets/css/home.scss';
-import { useState, useNuxtApp } from '#app';
+import { useNuxtApp } from '#app';
 
 export default {
   setup() {
@@ -47,9 +47,6 @@ export default {
       timer: null,
       totalClicks: 0,
       record: 0,
-      // async onConnectWallet() {
-      //   this.nuxtApp.payload.state.accountAddress = await connectWallet();
-      // },
     };
   },
   mounted() {
