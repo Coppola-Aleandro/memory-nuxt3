@@ -14,11 +14,6 @@ module.exports = {
       spacing: {
         120: '120px',
       },
-      colors: {
-        primary: colors.blue,
-        secondary: colors.black,
-        warning: colors.red,
-      },
     },
     fontFamily: {
       display: ['Mohave'],
