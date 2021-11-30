@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# Get started
 
 We recommend to look at the [documentation](https://v3.nuxtjs.org).
 
@@ -28,6 +28,6 @@ yarn build
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment).
 
+## Libraries
 
-💿  Install dependencies with `npm install` or `yarn install`
-🚀  Start development server with `npm run dev` or `yarn dev`
+- TailwindCSS [TailwindCSS](https://tailwindcss.com/)
