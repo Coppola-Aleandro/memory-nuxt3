@@ -53,7 +53,7 @@ import '~/assets/css/home.scss';
 export default {
   setup() {
     useMeta({
-      title: 'Home',
+      title: 'Memory Game',
     });
   },
   data() {
