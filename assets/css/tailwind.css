@@ -27,7 +27,3 @@ h2 {
 .container {
   @apply p-4 md:p-8;
 }
-
-.router-link-active {
-  @apply text-primary-600;
-}
