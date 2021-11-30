@@ -1,8 +1,8 @@
 <template>
   <div class="container m-auto">
-    <div class="w-full flex justify-between">
+    <div class="w-full flex justify-between items-center border-b-2 pb-4">
       <span>Mosse: {{ totalClicks }}</span>
-      <span>
+      <div class="flex items-center">
         Record: {{ record }} Mosse
         <button
           v-on:click="startGame()"
@@ -10,7 +10,7 @@
         >
           Nuova partita
         </button>
-      </span>
+      </div>
     </div>
 
     <div class="grid grid-cols-4 gap-8 mt-8">
@@ -28,7 +28,17 @@
 
     <div
       v-if="visibleCards.length === grid.length && grid.length !== 0"
-      class="mt-8 text-center bg-black text-white font-bold text-4xl"
+      class="
+        mt-8
+        text-center
+        bg-black
+        text-white
+        font-bold
+        text-4xl
+        p-4
+        rounded-md
+        shadow-md
+      "
     >
       Gioco completato in {{ totalClicks }} Mosse
     </div>
@@ -37,7 +47,6 @@
 
 <script>
 import '~/assets/css/home.scss';
-import { useNuxtApp } from '#app';
 
 export default {
   setup() {
@@ -47,7 +56,6 @@ export default {
   },
   data() {
     return {
-      nuxtApp: null,
       cards: ['blue', 'green', 'red', 'yellow', 'purple', 'pink'],
       grid: [],
       visibleCards: [],
@@ -58,7 +66,6 @@ export default {
     };
   },
   mounted() {
-    this.nuxtApp = useNuxtApp();
     this.startGame();
   },
   methods: {
