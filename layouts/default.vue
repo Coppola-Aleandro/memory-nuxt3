@@ -7,6 +7,7 @@
         p-4
         fixed
         w-full
+        justify-between
         top-0
         bg-white
         z-40
@@ -14,7 +15,7 @@
         h-24
       "
     >
-      Navigation
+      <span class="text-4xl font-bold">Memory</span>
     </nav>
     <main class="pt-24">
       <slot />
